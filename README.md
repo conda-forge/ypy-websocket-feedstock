@@ -1,7 +1,7 @@
 About ypy-websocket
 ===================
 
-Home: https://github.com/davidbrochart/ypy-websocket
+Home: https://github.com/y-crdt/ypy-websocket
 
 Package license: MIT
 
@@ -9,7 +9,7 @@ Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/ypy-websocket-f
 
 Summary: WebSocket connector for Ypy
 
-Development: https://github.com/davidbrochart/ypy-websocket
+Development: https://github.com/y-crdt/ypy-websocket
 
 Current build status
 ====================
