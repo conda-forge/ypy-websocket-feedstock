@@ -18,6 +18,7 @@ requirements:
   host:
     - pip
     - python >=3.7
+    - hatchling
   run:
     - python >=3.7
     - y-py >=0.5.3,<0.6.0
