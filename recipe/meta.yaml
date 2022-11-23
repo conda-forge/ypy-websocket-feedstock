@@ -1,5 +1,5 @@
 {% set name = "ypy-websocket" %}
-{% set version = "0.6.0" %}
+{% set version = "0.7.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/y/ypy_websocket/ypy_websocket-{{ version }}.tar.gz
-  sha256: 8aaa0a583363b74b7fcbab48f305d32b47e32040b9180be9198149fcc4feadd6
+  sha256: c5f7a17250155069fb85fc5710b98b933956cbcfaf7b2ce1bb74fe63e27d33de
 
 build:
   noarch: python
