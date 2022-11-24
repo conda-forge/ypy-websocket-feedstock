@@ -32,7 +32,6 @@ test:
   source_files:
     - src/tests
   requires:
-    - nodejs
     - pip
     - pytest-asyncio
     - pytest-cov
@@ -41,7 +40,7 @@ test:
     - ypy_websocket
   commands:
     - pip check
-    - cd src/tests && npm i && pytest -vv --asyncio-mode=auto --cov-branch --cov=ypy_websocket --cov-report=term-missing:skip-covered --no-cov-on-fail --cov-fail-under=80
+    - pytest src/tests -vv -k "not ypy_yjs" --asyncio-mode=auto --cov-branch --cov=ypy_websocket --cov-report=term-missing:skip-covered --no-cov-on-fail --cov-fail-under=80
 
 about:
   home: https://github.com/y-crdt/ypy-websocket
