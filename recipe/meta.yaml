@@ -1,17 +1,16 @@
-{% set name = "ypy-websocket" %}
 {% set version = "0.7.1" %}
 
 package:
-  name: {{ name|lower }}
+  name: ypy-websocket
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/y/ypy_websocket/ypy_websocket-{{ version }}.tar.gz
+  url: https://pypi.io/packages/source/y/ypy-websocket/ypy_websocket-{{ version }}.tar.gz
   sha256: aa1366772e3dca1a657142874318d4d46a39a120783d743884562ca5ab582f6c
 
 build:
   noarch: python
-  number: 0
+  number: 1
   script: {{ PYTHON }} -m pip install . -vv
 
 requirements:
@@ -20,14 +19,18 @@ requirements:
     - python >=3.7
     - hatchling
   run:
+    - aiofiles >=22.1.0,<23
+    - aiosqlite >=0.17.0,<1
     - python >=3.7
     - y-py >=0.5.3,<0.6.0
-    - aiofiles >=0.8.0,<1
-    - aiosqlite >=0.17.0,<1
 
 test:
+  requires:
+    - pip
   imports:
     - ypy_websocket
+  commands:
+    - pip check
 
 about:
   home: https://github.com/y-crdt/ypy-websocket
@@ -40,3 +43,4 @@ about:
 extra:
   recipe-maintainers:
     - davidbrochart
+    - conda-forge/jupyter_server
