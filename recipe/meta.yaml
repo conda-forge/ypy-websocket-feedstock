@@ -10,7 +10,7 @@ source:
     sha256: aa1366772e3dca1a657142874318d4d46a39a120783d743884562ca5ab582f6c
   - folder: src
     url: https://github.com/y-crdt/ypy-websocket/archive/refs/tags/{{ version }}.tar.gz
-    sh256: 31c7ab0cb107441449216b4d6f9a7dab05c7af1eade7a7eef7e618a139aff1e7
+    sha256: 31c7ab0cb107441449216b4d6f9a7dab05c7af1eade7a7eef7e618a139aff1e7
 
 build:
   noarch: python
