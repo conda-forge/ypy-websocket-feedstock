@@ -32,10 +32,11 @@ test:
   source_files:
     - src/tests
   requires:
-    - pip
     - nodejs
-    - pytest-cov
+    - pip
     - pytest-asyncio
+    - pytest-cov
+    - websockets >=10.0
   imports:
     - ypy_websocket
   commands:
