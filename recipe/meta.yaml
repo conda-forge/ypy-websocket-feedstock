@@ -40,7 +40,7 @@ test:
     - ypy_websocket
   commands:
     - pip check
-    - pytest src/tests -vv -k "not ypy_yjs" --asyncio-mode=auto --cov-branch --cov=ypy_websocket --cov-report=term-missing:skip-covered --no-cov-on-fail --cov-fail-under=80
+    - pytest src/tests -vv -k "not ypy_yjs" --asyncio-mode=auto --cov-branch --cov=ypy_websocket --cov-report=term-missing:skip-covered --no-cov-on-fail --cov-fail-under=60
 
 about:
   home: https://github.com/y-crdt/ypy-websocket
