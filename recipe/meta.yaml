@@ -28,7 +28,7 @@ test:
   source_files:
     - tests
   requires:
-    - nodejs
+    - nodejs >=18,<19
     - pip
     - pytest-asyncio
     - pytest-cov
