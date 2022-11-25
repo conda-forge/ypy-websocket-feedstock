@@ -1,4 +1,4 @@
-{% set version = "0.7.1" %}
+{% set version = "0.7.2" %}
 
 package:
   name: ypy-websocket
@@ -7,14 +7,14 @@ package:
 source:
   - folder: dist
     url: https://pypi.io/packages/source/y/ypy-websocket/ypy_websocket-{{ version }}.tar.gz
-    sha256: aa1366772e3dca1a657142874318d4d46a39a120783d743884562ca5ab582f6c
+    sha256: e94cd9b65a9d454529cddcb04f7dea351252863ae817747355e6e39105262927
   - folder: src
-    url: https://github.com/y-crdt/ypy-websocket/archive/refs/tags/{{ version }}.tar.gz
-    sha256: 31c7ab0cb107441449216b4d6f9a7dab05c7af1eade7a7eef7e618a139aff1e7
+    url: https://github.com/y-crdt/ypy-websocket/archive/refs/tags/v{{ version }}.tar.gz
+    sha256: b61d3c0c098cc5486ed2d7dbb4519a449c3935d5536b45fbd1c624261e9f71ad
 
 build:
   noarch: python
-  number: 1
+  number: 0
   script: cd dist && {{ PYTHON }} -m pip install . -vv
 
 requirements:
