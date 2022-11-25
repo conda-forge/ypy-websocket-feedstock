@@ -5,17 +5,13 @@ package:
   version: {{ version }}
 
 source:
-  - folder: dist
-    url: https://pypi.io/packages/source/y/ypy-websocket/ypy_websocket-{{ version }}.tar.gz
-    sha256: e94cd9b65a9d454529cddcb04f7dea351252863ae817747355e6e39105262927
-  - folder: src
-    url: https://github.com/y-crdt/ypy-websocket/archive/refs/tags/v{{ version }}.tar.gz
-    sha256: b61d3c0c098cc5486ed2d7dbb4519a449c3935d5536b45fbd1c624261e9f71ad
+  url: https://pypi.io/packages/source/y/ypy-websocket/ypy_websocket-{{ version }}.tar.gz
+  sha256: e94cd9b65a9d454529cddcb04f7dea351252863ae817747355e6e39105262927
 
 build:
   noarch: python
   number: 0
-  script: cd dist && {{ PYTHON }} -m pip install . -vv
+  script: {{ PYTHON }} -m pip install . -vv
 
 requirements:
   host:
@@ -30,8 +26,9 @@ requirements:
 
 test:
   source_files:
-    - src/tests
+    - tests
   requires:
+    - nodejs
     - pip
     - pytest-asyncio
     - pytest-cov
@@ -40,13 +37,14 @@ test:
     - ypy_websocket
   commands:
     - pip check
-    - pytest src/tests -vv -k "not ypy_yjs" --asyncio-mode=auto --cov-branch --cov=ypy_websocket --cov-report=term-missing:skip-covered --no-cov-on-fail --cov-fail-under=60
+    - cd tests && npm install
+    - cd .. && pytest -vv --asyncio-mode=auto --cov-branch --cov=ypy_websocket --cov-report=term-missing:skip-covered --no-cov-on-fail --cov-fail-under=78
 
 about:
   home: https://github.com/y-crdt/ypy-websocket
   license: MIT
   license_family: MIT
-  license_file: dist/LICENSE
+  license_file: LICENSE
   summary: WebSocket connector for Ypy
 
 extra:
