@@ -9,8 +9,6 @@ Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/ypy-websocket-f
 
 Summary: WebSocket connector for Ypy
 
-Development: https://github.com/y-crdt/ypy-websocket
-
 Current build status
 ====================
 
