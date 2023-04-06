@@ -1,11 +1,11 @@
-About ypy-websocket
-===================
+About ypy-websocket-feedstock
+=============================
+
+Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/ypy-websocket-feedstock/blob/main/LICENSE.txt)
 
 Home: https://github.com/y-crdt/ypy-websocket
 
 Package license: MIT
-
-Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/ypy-websocket-feedstock/blob/main/LICENSE.txt)
 
 Summary: WebSocket connector for Ypy
 
