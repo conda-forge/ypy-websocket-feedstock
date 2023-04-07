@@ -1,4 +1,4 @@
-{% set version = "0.8.4" %}
+{% set version = "0.9.0" %}
 
 package:
   name: ypy-websocket
@@ -6,7 +6,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/y/ypy-websocket/ypy_websocket-{{ version }}.tar.gz
-  sha256: 43a001473f5c8abcf182f603049cf305cbc855ad8deaa9dfa0f3b5a7cea9d0ff
+  sha256: dd12ae046ea7ddf2c58f028b74cacb9c493dd07229c5efda775dcdc2c26096a5
 
 build:
   noarch: python
@@ -19,10 +19,10 @@ requirements:
     - pip
     - python >=3.7
   run:
-    - aiofiles >=22.1.0,<23
-    - aiosqlite >=0.17.0,<1
     - python >=3.7
+    - aiosqlite >=0.18.0,<1
     - y-py >=0.6.0,<0.7.0
+    - anyio >=3.6.2,<4
 
 test:
   source_files:
