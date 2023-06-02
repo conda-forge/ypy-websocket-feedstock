@@ -33,6 +33,7 @@ test:
     - pytest-asyncio
     - pytest-cov
     - websockets >=10.0
+    - uvicorn
   imports:
     - ypy_websocket
   commands:
