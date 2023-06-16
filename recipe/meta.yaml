@@ -10,7 +10,7 @@ source:
 
 build:
   noarch: python
-  number: 0
+  number: 1
   script: {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
 
 requirements:
@@ -47,6 +47,7 @@ about:
   license_family: MIT
   license_file: LICENSE
   summary: WebSocket connector for Ypy
+  doc_url: https://davidbrochart.github.io/ypy-websocket
 
 extra:
   recipe-maintainers:

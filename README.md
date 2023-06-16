@@ -9,6 +9,8 @@ Package license: MIT
 
 Summary: WebSocket connector for Ypy
 
+Documentation: https://davidbrochart.github.io/ypy-websocket
+
 Current build status
 ====================
 
