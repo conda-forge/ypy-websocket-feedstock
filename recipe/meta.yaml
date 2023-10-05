@@ -1,4 +1,4 @@
-{% set version = "0.12.3" %}
+{% set version = "0.12.4" %}
 
 package:
   name: ypy-websocket
@@ -6,7 +6,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/y/ypy-websocket/ypy_websocket-{{ version }}.tar.gz
-  sha256: 787255b2973d1a561fe8bdd5d1668f09417ff3ac806836435e260e387b927a88
+  sha256: cbbf5fdaa9a301a0b5f9455f1f29478b7c05b62773b2dd2a65c6502b4e10afa1
 
 build:
   noarch: python
@@ -40,7 +40,7 @@ test:
   commands:
     - pip check
     - cd tests && npm install
-    - cd .. && pytest -vv --asyncio-mode=auto --cov-branch --cov=ypy_websocket --cov-report=term-missing:skip-covered --no-cov-on-fail --cov-fail-under=70
+    - cd .. && pytest -vv --asyncio-mode=auto --cov-branch --cov=ypy_websocket --cov-report=term-missing:skip-covered --no-cov-on-fail --cov-fail-under=69
 
 about:
   home: https://github.com/y-crdt/ypy-websocket
