@@ -29,19 +29,22 @@ test:
   source_files:
     - tests
   requires:
+    - coverage
     - nodejs >=18,<19
     - pip
+    - pytest
     - pytest-asyncio
-    - pytest-cov
     - python {{ python_min }}
     - uvicorn
-    - websockets >=10.0
+    - websockets >=10.0,<14
   imports:
     - ypy_websocket
   commands:
     - pip check
     - cd tests && npm install
-    - cd .. && pytest -vv --asyncio-mode=auto --cov-branch --cov=ypy_websocket --cov-report=term-missing:skip-covered --no-cov-on-fail --cov-fail-under=69
+    - cd ..
+    - coverage run --source=ypy_websocket --branch -m pytest -vv --tb=long --color=yes --asyncio-mode=auto
+    - coverage report --show-missing --skip-covered --fail-under 77
 
 about:
   home: https://github.com/y-crdt/ypy-websocket
