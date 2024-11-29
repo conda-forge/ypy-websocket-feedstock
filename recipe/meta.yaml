@@ -19,11 +19,11 @@ requirements:
     - pip
     - python {{ python_min }}
   run:
-    - python >={{ python_min }}
     - aiosqlite >=0.18.0,<1
-    - y-py >=0.6.0,<0.7.0
     - anyio >=3.6.2,<5
+    - python >={{ python_min }}
     - typing_extensions
+    - y-py >=0.6.0,<0.7.0
 
 test:
   source_files:
@@ -33,9 +33,9 @@ test:
     - pip
     - pytest-asyncio
     - pytest-cov
-    - websockets >=10.0
-    - uvicorn
     - python {{ python_min }}
+    - uvicorn
+    - websockets >=10.0
   imports:
     - ypy_websocket
   commands:
