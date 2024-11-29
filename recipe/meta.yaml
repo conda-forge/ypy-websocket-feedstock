@@ -5,21 +5,21 @@ package:
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/y/ypy-websocket/ypy_websocket-{{ version }}.tar.gz
+  url: https://pypi.org/packages/source/y/ypy-websocket/ypy_websocket-{{ version }}.tar.gz
   sha256: cbbf5fdaa9a301a0b5f9455f1f29478b7c05b62773b2dd2a65c6502b4e10afa1
 
 build:
   noarch: python
-  number: 0
+  number: 1
   script: {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
 
 requirements:
   host:
     - hatchling
     - pip
-    - python >=3.7
+    - python {{ python_min }}
   run:
-    - python >=3.7
+    - python >={{ python_min }}
     - aiosqlite >=0.18.0,<1
     - y-py >=0.6.0,<0.7.0
     - anyio >=3.6.2,<5
@@ -35,6 +35,7 @@ test:
     - pytest-cov
     - websockets >=10.0
     - uvicorn
+    - python {{ python_min }}
   imports:
     - ypy_websocket
   commands:
